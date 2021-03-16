@@ -22,7 +22,7 @@ h2 {
     font-size: 30px;
     font-weight: 300;
     line-height: 1.2;
-
+color: blueviolet
     font-family: monospace;
 }
 
@@ -37,23 +37,24 @@ h1 {
     position: absolute;
     overflow: hidden;
     height: 800px;
-    color: #FFFFFF;
+    color:blueviolet;
     left: 0;
     top: 0;
     bottom: 0;
     right: 0;
     opacity: 0.83;
-    background: background: rgb(2, 0, 36);
-    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(255, 135, 250, 1) 0%, rgba(236, 140, 240, 1) 0%, rgba(247, 120, 242, 1) 0%, rgba(255, 106, 244, 1) 51%, rgba(215, 84, 250, 1) 69%, rgba(183, 66, 255, 1) 100%);
+    background: #ffccff;
     display: table;
     width: 100%;
     height: 100%;
     z-index: 9;
+    
 }
 
 body {
     margin: 0;
     padding-top: 800px;
+    text-align: center;
 }
 
 .profile {
@@ -69,11 +70,12 @@ body {
     cursor: pointer;
     position: absolute;
     z-index: 10;
+    position: fixed;
 }
 
 .links {
     float: left;
-    color: white;
+    color: blueviolet;
     font-size: 25px;
     padding-left: 4px;
     padding-right: 4px;
@@ -86,15 +88,20 @@ body {
     background-color: crimson;
 }
 
-#hobbies{
-    text-align: center;
-     background-color: background: rgb(131,58,180);
-background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(29,253,253,1) 0%, rgba(39,253,230,1) 27%, rgba(63,253,178,1) 53%, rgba(109,252,95,1) 100%, rgba(74,252,160,1) 100%, rgba(111,252,90,1) 100%, rgba(255,250,0,1) 100%, rgba(252,170,56,1) 100%, rgba(252,101,49,1) 100%, rgba(252,176,69,1) 100%);
+h1 {
+    font-size: 40px;
+    font-family: sans-serif;
+    font-weight: 300;
 }
 
-#contact{
-    text-align: center;
-    background-color:background: rgb(131,58,180);
-background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 0%, rgba(255,250,0,1) 100%, rgba(252,170,56,1) 100%, rgba(252,101,49,1) 100%, rgba(252,176,69,1) 100%);
-    
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+.article:hover {
+    color: fuchsia;
 }
