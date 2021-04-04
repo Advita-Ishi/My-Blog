@@ -1,69 +1,75 @@
 <html>
 
 <head>
-    <title> Image Gallery </title>
+    <title> Advita </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
 <body>
     <div class="container">
-        <section>
-            <h1> My Image Gallery </h1>
-            <img src="My%20little%20pony.png">
-        </section>
-        <br>
-        <section id="grid">
-            <div>
-                <span>
-                    <img src="celestia.jpg">
-                    <img src="twilight.jpg">
-                    <img src="luna.jpg">
-                    <img src="pinky%20pie.png">
-                </span>
-            </div>
-            <div>
-                <span>
-                    <img src="rainbow.png">
-                    <img src="rarity.jpg">
-                    <img src="fluttershy.jpg">
-                    <img src="applejack.jpg">
-                </span>
-            </div>
+        <section id="Apps">
+            <h1> My Apps </h1>
+            <iframe width="400" height="620" style="border: 0px;" src="https://studio.code.org/projects/applab/57y-DiYXH61ghEEmUvaEIckLyHXbAYs7L2E3a0_1_64/embed"> </iframe>
 
+            <iframe width="400" height="620" style="border: 0px;" src="https://studio.code.org/projects/applab/arN7tqs4UAQzDKresHjrESGLVYAhRjSyRskLMGsxQPE/embed"> </iframe>
         </section>
+        <h1> Games </h1>
         <div id="myCarousel" class="carousel slide">
+            <!-- Wrapper for slides -->
             <div class="carousel-inner">
                 <div class="item active">
-                    <center> <img src="celestia.jpg">
+                    <center> <a href="https://studio.code.org/projects/flappy/3cxI7zzIbzV0D-cPYbOuYRq6OuBC4nhrxZRsfXIXYIQ" target="_blank"> <img src="Flappy.jpg" class="img-responsive"> </a>
                         <div class="carousel-content">
-                            <p> Princess Celestia </p>
+                            <p> Flappy Bird </p>
+                        </div>
+                    </center>
+                </div>
+                <div class="item">
+                    <center>
+                        <a href="https://studio.code.org/projects/playlab/oZ8lFqLY1vryxp2ZPdvmSSw-V1Dp_9F9oru2B5K57L0" target="_blank">
+                            <img src="Wizard.png" class="img-responsive">
+                        </a>
+                        <div class="carousel-content">
+                            <p> Wizard </p>
+
+                        </div>
                     </center>
                 </div>
             </div>
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left"></span> </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next"> <span class="glyphicon glyphicon-chevron-right"></span> </a>
         </div>
-        <div class="item">
-            <a href="twilight.jpg" target="_blank"> </a>
-                <a href="luna.jpg" target="_blank"> </a>
-                
-                    <a href="pinky%20pie.png" target="_blank"> </a>
-                
-                        <a href="rainbow.png" target="_blank"> </a>
+        <h1> My ChatBot </h1>
+        <div id="myCarousel_1" class="carousel slide">
+            <div class="carousel-inner">
+                <div class="item active">
+                    <center> <iframe allow="microphone;" width="350" height="430" src="https://console.dialogflow.com/api-client/demo/embedded/27d019d6-02e5-48ae-a497-28ccec49b2ba">
+                        </iframe>
+                        <div class="carousel-content">
+                            <p> Advita ChatBot </p>
+                        </div>
+                    </center>
+                </div>
+                <div class="item">
+                    <center> <iframe allow="microphone;" width="350" height="430" src="https://console.dialogflow.com/api-client/demo/embedded/678c53f6-967b-4a45-b234-52a43aae0098">
+                        </iframe>
                         
-                            <a href="rarity.jpg" target="_blank"> </a>
-                            
-                                <a href="fluttershy.jpg" target="_blank"> </a>
-                                
-                                    <a href="applejack.jpg" target="_blank"> </a>
-                                    
-                                    </div>
-                                </div>
-                                <a class="left carousel-control" href="#myCarousel" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left"></span> </a>
-                                <a class="right carousel-control" href="#myCarousel" data-slide="next"> <span class="glyphicon glyphicon-chevron-right"></span> </a>
+                        <div class="carousel-content">
+                            <p> Chandigargh ChatBot </p>
+
+                        </div>
+                    </center>
+                </div>
+            </div>
+            <a class="left carousel-control" href="#myCarousel_1" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left"></span> </a>
+            <a class="right carousel-control" href="#myCarousel_1" data-slide="next"> <span class="glyphicon glyphicon-chevron-right"></span> </a>
+        </div>
     </div>
-                       
+
+        
 </body>
 
 </html>
