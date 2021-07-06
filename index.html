@@ -1,22 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<title> Moving Rover </title>
+<style>
+body{
+	background-image: url("mars.gif");
+    background-position: center;
+    background-size: cover;
+}
+#myCanvas
+{
+	border-width:10px;
+	background-color: white; 
+	border-style:ridge;
+}
 
-<title>C81</title>
-<link rel="stylesheet" type="text/css" href="C81style.css">
+h1,h4
+{
+	color: white !important;
+}
+</style>		
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<title>Moving Rover On</title>
 </head>
-<body class="body_backgorund">
-
+<body onload="add()"> 
 <center>
-	<h1>My First Canvas</h1>
-	<canvas id="my_canvas" width="800" height="600"></canvas>
-</center>
-<br>
-<br>
-<span> Color </span> <input type="text" id="colorname">
-<br>
-<button onclick="clearArea()"> Clear </button>
+<h1>Moving Rover On Mars</h1>
+<canvas id="myCanvas" width="800" height="550"></canvas>
+<h4>
+	<b class="text-danger">NOTE : </b> IF ROVER IS NOT VISIBLE PRESS ANY ARROW KEY
+</h4>
 
-<script src="C81main.js"></script>
+</center>
+<script src="main.js">
+</script>
 </body>
 </html>

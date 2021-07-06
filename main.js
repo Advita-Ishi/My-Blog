@@ -1,25 +1,94 @@
-var images= [
-    "blob:https://web.whatsapp.com/f9cd9b37-9450-43f9-8cea-ffd14ff9d2fc";
-    "blob:https://web.whatsapp.com/0b903958-5a74-4f73-81dd-2dff41d91761";
-    "blob:https://web.whatsapp.com/aee3a351-d848-494e-a71b-6361ed9a472e";
-    "blob:https://web.whatsapp.com/6e4b84bd-7e6d-4f5f-950f-47b48d8f9873";
-];
+canvas = document.getElementById("myCanvas");
+var CTX = canvas.getContext("2d");
 
-var names= [
-    "My Family Album", "Amit Kumar", "Neelima", "Advita Ishi", "Anvit Arav"
-];
+var mars_img= ["mars_1.jpg", "mars_2.jpg", "mars_3.jpg", "mars_4.jpg", "mars.jpg"];
+var random_number= Math.floor(Math.random()*5);
 
-var i=0;
-function update() {
-    i++;
-    var number_of_family_members_in_array = 5
-    if(i>number_of_family_members_in_array)
-    {
-        i = 0
+var background_image = mars_img[random_number];
+var rover_image = "rover.png";
+
+var rover_width = "100";
+var rover_height = "100";
+
+var rover_x = 200;
+var rover_y = 200;
+
+function add() {
+    background_img = new Image();
+    background_img.onload = upload_background;
+    background_img.src = background_image;
+
+    rover_img = new Image();
+    rover_img.onload = upload_rover;
+    rover_img.src = rover_image;
+
+}
+
+function upload_rover() {
+    CTX.drawImage(rover_img, rover_x, rover_y, rover_width, rover_height);
+}
+
+function upload_background() {
+    CTX.drawImage(background_img, 0, 0, canvas.width, canvas.height);
+}
+
+window.addEventListener("keydown", my_keydown);
+
+function my_keydown(e) {
+    key_pressed = e.keyCode;
+    if (key_pressed == '38') {
+        up();
+        console.log("Up key is pressed.");
     }
 
-    var updated_images = images[i]
-    var updated_names = names[i]
-    document.getElementById("family_member").src= updated_images;
-    document.getElementById("family_member_name").src= updated_names;
+    if (key_pressed == '40') {
+        down();
+        console.log("Down key is pressed.");
+    }
+
+    if (key_pressed == '37') {
+        left();
+        console.log("Left key is pressed.");
+    }
+
+    if (key_pressed == '39') {
+        right();
+        console.log("Right key is pressed.");
+    }
+}
+
+function up() {
+    if (rover_y >= 0) {
+        rover_y = rover_y-10;
+        console.log("When up arrow is pressed, x = " + rover_x + " | y = " + rover_y);
+        upload_background();
+        upload_rover();
+    }
+}
+
+function down() {
+    if (rover_y <= 440) {
+        rover_y = rover_y+10;
+        console.log("When up arrow is pressed, x = " + rover_x + " | y = " + rover_y);
+        upload_background();
+        upload_rover();
+    }
+}
+
+function left() {
+    if (rover_x >= 0) {
+        rover_x = rover_x-10;
+        console.log("When up arrow is pressed, x = " + rover_x + " | y = " + rover_y);
+        upload_background();
+        upload_rover();
+    }
+}
+
+function right() {
+    if (rover_x <= 650) {
+        rover_x = rover_x+10;
+        console.log("When up arrow is pressed, x = " + rover_x + " | y = " + rover_y);
+        upload_background();
+        upload_rover();
+    }
 }
